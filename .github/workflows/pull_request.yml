@@ -33,11 +33,12 @@ jobs:
       - name: Lint App
         run: yarn lint
 
+      - name: Stylelint
+        run: yarn stylelint
+
       - name: Build App
         run: yarn build
 
-      - name: Stylelint
-        run: yarn stylelint
       - name: Telegram Notify Success
         uses: appleboy/telegram-action@master
         if: ${{ success() }}
