@@ -38,3 +38,29 @@ jobs:
 
       - name: Styleling
         run: yarn stylelint
+      - name: Telegram Notify Success
+        uses: appleboy/telegram-action@master
+        if: ${{ success() }}
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ✅ *The job has been completed.*
+            #️⃣ Run # ${{github.run_number}}. Event type: *${{ github.event_name }}*
+            🧑‍💻 Developer: *${{github.actor}}*
+            🔗 Href: https://github.com/${{github.repository}}
+          format: markdown
+          disable_web_page_preview: "True"
+      - name: Telegram Notify Failure
+        uses: appleboy/telegram-action@master
+        if: ${{ failure() }}
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ❌ *The job has been failed!*
+            #️⃣ Run # ${{github.run_number}}. Event type: *${{ github.event_name }}*
+            🧑‍💻 Developer: *${{github.actor}}*
+            🔗 Href: https://github.com/${{github.repository}}
+          format: markdown
+          disable_web_page_preview: "True"
