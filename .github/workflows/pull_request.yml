@@ -35,3 +35,6 @@ jobs:
 
       - name: Build App
         run: yarn build
+
+      - name: Styleling
+        run: yarn stylelint
