@@ -1,0 +1,11 @@
+{
+  "plugins": ["stylelint-scss", "stylelint-order"],
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-empty-line-before": null,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-order": ["width", "height"]
+  }
+}
