@@ -26,7 +26,7 @@
           "warn",
           {
             "type": "attribute",
-            "prefix": "app",
+            "prefix": "lgsa",
             "style": "camelCase"
           }
         ],
@@ -34,7 +34,7 @@
           "warn",
           {
             "type": "element",
-            "prefix": "app",
+            "prefix": "lgsa",
             "style": "kebab-case"
           }
         ],
@@ -49,7 +49,10 @@
         "import/prefer-default-export": "off",
         "no-plusplus": "off",
         "eslint class-methods-use-this": "off",
-        "@angular-eslint/component-class-suffix": "off"
+        "@angular-eslint/component-class-suffix": "off",
+        "class-methods-use-this": "off",
+        "no-multi-assign": "off",
+        "@typescript-eslint/no-unused-vars": "warn"
       }
     },
     {

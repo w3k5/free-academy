@@ -1,0 +1,11 @@
+.lgsm-button {
+  &--primary {
+    background: var(--primary);
+    color: var(--white);
+    padding: 10px 25px;
+
+    &:hover {
+      background: var(--primary-hover);
+    }
+  }
+}

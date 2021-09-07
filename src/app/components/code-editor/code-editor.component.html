@@ -1,0 +1,8 @@
+<ngx-monaco-editor
+  [options]="editorOptions"
+  [(ngModel)]="code"
+  class="lgsa-monaco"
+  (ngModelChange)="onChange($event)"
+  (onInit)="onInit($event)"
+  [lang]="type"
+></ngx-monaco-editor>

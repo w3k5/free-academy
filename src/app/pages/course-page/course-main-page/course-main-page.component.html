@@ -1,0 +1,40 @@
+<div class="lgsa-page courses courses__container container">
+  <ul class="courses-list">
+    <li class="courses-list__item" *ngFor="let course of courses | async">
+      <section class="course">
+        <a [routerLink]="course.id" class="course__title-link">
+          <span class="course__badge" *ngIf="course.isPro">
+            Pro
+          </span>
+          <h2 class="course__title">
+            {{ course.title }}
+          </h2>
+        </a>
+        <p class="course__description">
+          {{ course.description }}
+        </p>
+        <footer class="course__footer">
+          <ul class="course__stats">
+            <li>
+              <span class="course__num">
+                {{course.modules}}
+              </span>
+              <span class="course__type">
+                Частей
+              </span>
+            </li>
+            <li>
+              <span class="course__num">
+                {{course.lessons}}
+              </span>
+              <span class="course__type">
+                Заданий
+              </span>
+            </li>
+          </ul>
+          <lgsa-button text="Пройти курс" type="link" [link]="course.id"></lgsa-button>
+        </footer>
+      </section>
+    </li>
+  </ul>
+</div>

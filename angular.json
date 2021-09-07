@@ -27,10 +27,12 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              { "glob": "**/*", "input": "node_modules/monaco-editor", "output": "assets/monaco-editor" },
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
+              "node_modules/@clr/ui/clr-ui.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -119,5 +121,26 @@
   "defaultProject": "shared-library",
   "cli": {
     "defaultCollection": "@angular-eslint/schematics"
-  }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss",
+      "skipTests": true
+    },
+    "@schematics/angular:class": {
+      "skipTests": true
+    },
+    "@schematics/angular:directive": {
+      "skipTests": true
+    },
+    "@schematics/angular:guard": {
+      "skipTests": true
+    },
+    "@schematics/angular:pipe": {
+      "skipTests": true
+    },
+    "@schematics/angular:service": {
+      "skipTests": true
+    }
+ }
 }

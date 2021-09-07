@@ -12,6 +12,7 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2017",
@@ -24,11 +25,15 @@
       "@components/*": ["src/app/components/*"],
       "@pages/*": ["src/app/pages/*"],
       "@pipes/*": ["src/app/pipes/*"],
+      "@utils/*": ["src/app/utils/*"],
+      "@mock/*": ["src/app/mock/*"],
+      "@ui-kit/*": ["src/app/ui-kit/*"],
       "@services/*": ["src/app/services/*"],
       "@environments/*": ["src/environments/*"],
       "@interfaces": ["src/app/interfaces/index.ts"],
       "@enums": ["src/app/enums/index.ts"],
-      "@types": ["src/app/types/index.ts"]
+      "@types": ["src/app/types/index.ts"],
+      "@directives": ["src/app/directives/index.ts"]
     }
   },
   "angularCompilerOptions": {
