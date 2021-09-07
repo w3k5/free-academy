@@ -1,0 +1,147 @@
+<ng-container *ngVar="exerciseObservable | async as exerciseData">
+  <div class="lgsa-page exercise exercise__container container">
+    <header class="exercise__header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, numquam!</header>
+    <div class="exercise__sidebar exercise-sidebar__wrapper" (click)="handleSidebar()">
+      <div class="exercise-sidebar__inner">
+        <span>Теория</span>
+      </div>
+    </div>
+    <div class="exercise__theory exercise-theory" *ngIf="isSidebarOpen">
+      <div class="exercise-theory__wrapper">
+        <header class="exercise-theory__header">
+          <div class="exercise-theory__tab">Теория</div>
+        </header>
+        <div class="exercise-theory__content">
+          <markdown ngPreserveWhitespaces>
+            # Non faveatque fatalia tardi
+
+            ## Natus dixerat aura rector rates
+
+            ~~Lorem markdownum~~ mare desiderioque praedam qua alas fidelius fuit: tum. Nec
+            Finierat, capaci, levati. Exempla instat, est hasta loco protinus saltus
+            volucresque tela; at. Manebo frugum hunc nunc io frequentat properent Crotonis
+            ex est, sic ventis adiciunt me secus illa. Miserae natis satus Byblida vires!
+
+            ## Labitur quoque et videndo veniebat Thestorides quae
+
+            Mollia duri undas obliquum famulae harundinibus glacialis orandus mortale
+            tigris. Repellit dedisse sed enim manibusque caluere, divus clamoribus parabat
+            fortemque **in** supplicat cetera diduxit avus.
+
+            1. Clausis fortius adicit arbitrio et videre satus
+            2. Bacchae frenisque requiris ego illa
+            3. Armis diva terga
+            4. Igne dea reverentia falsum incessere et rigorem
+            5. Frondes moventem coniungere do freta plantas mater
+
+            ```Saxo Aenea illa demum flebat committit silvamque```
+            # Non faveatque fatalia tardi
+
+            ## Natus dixerat aura rector rates
+
+            ~~Lorem markdownum~~ mare desiderioque praedam qua alas fidelius fuit: tum. Nec
+            Finierat, capaci, levati. Exempla instat, est hasta loco protinus saltus
+            volucresque tela; at. Manebo frugum hunc nunc io frequentat properent Crotonis
+            ex est, sic ventis adiciunt me secus illa. Miserae natis satus Byblida vires!
+
+            ## Labitur quoque et videndo veniebat Thestorides quae
+
+            Mollia duri undas obliquum famulae harundinibus glacialis orandus mortale
+            tigris. Repellit dedisse sed enim manibusque caluere, divus clamoribus parabat
+            fortemque **in** supplicat cetera diduxit avus.
+
+            1. Clausis fortius adicit arbitrio et videre satus
+            2. Bacchae frenisque requiris ego illa
+            3. Armis diva terga
+            4. Igne dea reverentia falsum incessere et rigorem
+            5. Frondes moventem coniungere do freta plantas mater
+
+            ```Saxo Aenea illa demum flebat committit silvamque```
+            # Non faveatque fatalia tardi
+
+            ## Natus dixerat aura rector rates
+
+            ~~Lorem markdownum~~ mare desiderioque praedam qua alas fidelius fuit: tum. Nec
+            Finierat, capaci, levati. Exempla instat, est hasta loco protinus saltus
+            volucresque tela; at. Manebo frugum hunc nunc io frequentat properent Crotonis
+            ex est, sic ventis adiciunt me secus illa. Miserae natis satus Byblida vires!
+
+            ## Labitur quoque et videndo veniebat Thestorides quae
+
+            Mollia duri undas obliquum famulae harundinibus glacialis orandus mortale
+            tigris. Repellit dedisse sed enim manibusque caluere, divus clamoribus parabat
+            fortemque **in** supplicat cetera diduxit avus.
+
+            1. Clausis fortius adicit arbitrio et videre satus
+            2. Bacchae frenisque requiris ego illa
+            3. Armis diva terga
+            4. Igne dea reverentia falsum incessere et rigorem
+            5. Frondes moventem coniungere do freta plantas mater
+
+            ```Saxo Aenea illa demum flebat committit silvamque```
+          </markdown>
+        </div>
+        <footer class="exercise-theory__footer">
+          <lgsa-button text="Перейти к заданию" (click)="handleSidebar()"></lgsa-button>
+        </footer>
+      </div>
+      <div class="exercise-theory__cross">
+        <button (click)="handleSidebar()">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M21.2826 20.0001L26.7339 14.5485C27.0887 14.1939 27.0887 13.6206 26.7339 13.266C26.3793 12.9113 25.806 12.9113 25.4514 13.266L19.9999 18.7176L14.5486 13.266C14.1938 12.9113 13.6207 12.9113 13.2661 13.266C12.9113 13.6206 12.9113 14.1939 13.2661 14.5485L18.7174 20.0001L13.2661 25.4517C12.9113 25.8063 12.9113 26.3797 13.2661 26.7343C13.4428 26.9111 13.6751 27 13.9073 27C14.1395 27 14.3717 26.9111 14.5486 26.7343L19.9999 21.2827L25.4514 26.7343C25.6283 26.9111 25.8605 27 26.0927 27C26.3249 27 26.557 26.9111 26.7339 26.7343C27.0887 26.3797 27.0887 25.8063 26.7339 25.4517L21.2826 20.0001Z"
+              fill="var(--white)"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="exercise__code">
+      <lgsa-code-editor [exercise]="exerciseData" [editorType]="languageEnum.javascript"></lgsa-code-editor>
+    </div>
+    <div class="exercise__result">
+      <iframe
+        frameborder="0"
+        style="width: 100%; height: 100%; background-color: var(--white);"
+        id="code-result"
+        #codeResult
+      ></iframe>
+    </div>
+    <div class="exercise__goals">
+      <div class="exercise-goals__heading">
+        <div class="exercise-goals__heading-title">
+          <span class="exercise-goals__count-label"> Задачи </span>
+          <span class="exercise-goals__count"> (выполнено 0 из 1) </span>
+        </div>
+      </div>
+      <div class="exercise-goals__content">
+        <ol class="exercise-goals__list">
+          <li class="exercise-goals__list-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus placeat non atque culpa dolorem vel!
+          </li>
+          <li class="exercise-goals__list-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus placeat non atque culpa dolorem vel!
+          </li>
+          <li class="exercise-goals__list-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus placeat non atque culpa dolorem vel!
+          </li>
+          <li class="exercise-goals__list-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus placeat non atque culpa dolorem vel!
+          </li>
+          <li class="exercise-goals__list-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus placeat non atque culpa dolorem vel!
+          </li>
+          <li class="exercise-goals__list-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus placeat non atque culpa dolorem vel!
+          </li>
+          <li class="exercise-goals__list-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus placeat non atque culpa dolorem vel!
+          </li>
+          <li class="exercise-goals__list-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus placeat non atque culpa dolorem vel!
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</ng-container>

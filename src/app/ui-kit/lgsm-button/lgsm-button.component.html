@@ -1,0 +1,12 @@
+<div [ngSwitch]="type">
+  <div *ngSwitchCase="'link'">
+    <a class="lgsm-button lgsm-button--primary" [routerLink]="link">
+      {{ text }}
+    </a>
+  </div>
+  <ng-container *ngSwitchCase="'button'">
+    <button class="lgsm-button lgsm-button--primary">
+      {{ text }}
+    </button>
+  </ng-container>
+</div>

@@ -1,0 +1,23 @@
+body {
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: var(--container-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.editor-container {
+  height: 100% !important;
+}
+
+.lgsa-page {
+  flex: 1;
+}
+
+code {
+  background: var(--background-color);
+  border-radius: 3px;
+  padding: 1px 12px;
+}
